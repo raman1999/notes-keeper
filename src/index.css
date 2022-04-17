@@ -1,3 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .btn {
+    @apply text-white w-fit bg-yellow-500 hover:bg-yellow-600  font-bold rounded-lg px-5 py-2.5 mr-2 mb-2;
+  }
+  .btn-secondary {
+    @apply text-yellow-600 w-fit border-2 border-yellow-500 hover:bg-yellow-500  hover:text-white font-bold rounded-lg px-5 py-2.5 mr-2 mb-2;
+  }
+}
+
+.shadow-bottom {
+  box-shadow: inset 0 -3px 0 0 #dadce0;
+}

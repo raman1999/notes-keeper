@@ -5,7 +5,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App h-[100vh]">
       <Navbar />
       <ToastContainer
         position="top-right"
@@ -17,7 +17,7 @@ function App() {
         toastStyle={{ backgroundColor: "rgb(50,50,50)" }}
       />
 
-      <div className="main-container">
+      <div className="routes-container min-h-[80vh]">
         <RoutingPath />
       </div>
       <Footer />
