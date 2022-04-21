@@ -1,0 +1,15 @@
+.input-container {
+  @apply flex space-x-3 md:flex-col md:space-y-1;
+}
+.label {
+  @apply text-gray-600 w-[9rem] pt-1 text-center md:w-full md:text-left md:pl-5;
+}
+.input-with-error-container {
+  @apply flex-grow flex flex-col;
+}
+.input-field {
+  @apply border-2 border-gray-300 p-2 w-full min-w-[20rem];
+}
+.form-container {
+  @apply flex flex-col py-4 px-5 min-h-[60vh]  justify-between space-y-5 border-2 border-[rgba(146,145,145,0.59)];
+}
