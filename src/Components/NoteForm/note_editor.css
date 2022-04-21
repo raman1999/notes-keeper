@@ -1,0 +1,9 @@
+.ql-container {
+  @apply lg:min-h-full;
+}
+.ql-toolbar.ql-snow {
+  border-bottom: none !important;
+}
+.tippy-arrow::after {
+  border-top-color: rgb(0, 8, 16, 0.5) !important;
+}
