@@ -1,5 +1,5 @@
 import { createContext, useContext } from "react";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 const AuthenticationContext = createContext();
 
 export const AuthenticationProvider = ({ children }) => {

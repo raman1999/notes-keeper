@@ -5,15 +5,27 @@ import App from "./App";
 import "./index.css";
 import { AuthenticationProvider } from "./Context";
 import { makeServer } from "./server";
+import {
+  AuthenticationProvider,
+  FilterProvider,
+  UserDataProvider,
+  ThemeProvider,
+} from "./Context";
 // Call make Server
 makeServer();
 
 ReactDOM.render(
   <Router>
     <React.StrictMode>
-      <AuthenticationProvider>
-        <App />
-      </AuthenticationProvider>
+      <ThemeProvider>
+        <AuthenticationProvider>
+          <UserDataProvider>
+            <FilterProvider>
+              <App />
+            </FilterProvider>
+          </UserDataProvider>
+        </AuthenticationProvider>
+      </ThemeProvider>
     </React.StrictMode>
   </Router>,
   document.getElementById("root")

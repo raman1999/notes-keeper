@@ -1,0 +1,9 @@
+.sidebar-link {
+  @apply flex space-x-6 items-center tracking-wide pl-7 py-3 text-3xl font-semibold font-["Roboto"]  text-gray-600 dark:text-white;
+}
+
+@screen lg {
+  .sidebar {
+    @apply fixed z-10  top-16 bottom-0 pr-8 left-[-20rem]  shadow-md shadow-black dark:shadow-gray-600;
+  }
+}
