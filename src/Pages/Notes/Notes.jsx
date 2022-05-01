@@ -56,9 +56,13 @@ export function Notes() {
       {showNoteForm && <NoteForm setShowNoteForm={setShowNoteForm} />}
 
       {notes.length === 0 && pinnedNotes.length === 0 && (
-        <div className="empty-notes h-full flex flex-col items-center">
-          <GiNotebook size={300} className="text-gray-600" />
-          <span className="text-5xl text-gray-700">Add some notes</span>
+        <div className="flex flex-col items-center gap-5 mt-[5rem]">
+          <div className="bg-yellow-100 rounded-3xl p-6 w-fit">
+            <GiNotebook className="text-[15rem] text-yellow-600" />
+          </div>
+          <h3 className="text-3xl text-gray-600 font-semibold dark:text-white">
+            Add Some Notes
+          </h3>
         </div>
       )}
       {pinnedNotes.length > 0 && (
