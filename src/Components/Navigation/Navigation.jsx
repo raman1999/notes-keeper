@@ -1,15 +1,21 @@
+import { MdLogout, MdDarkMode, MdLightMode } from "react-icons/md";
 import { useNavigate, NavLink } from "react-router-dom";
-import "./navigation.css";
-import { useAuthenticationContext, useUserContext } from "../../Context";
+import {
+  useAuthenticationContext,
+  useUserContext,
+  useTheme,
+} from "../../Context";
 import { toast } from "react-toastify";
 export function Navbar() {
   const { login, setLogin } = useAuthenticationContext();
   const { userDispatch } = useUserContext();
+  const { theme, setTheme } = useTheme();
   const navigate = useNavigate();
 
   function logOutHandler() {
     userDispatch({ type: "SET_NOTES", payload: [] });
     userDispatch({ type: "SET_ARCHIEVES", payload: [] });
+    userDispatch({ type: "SET_TRASH", payload: [] });
     setLogin(false);
     localStorage.clear();
     toast.success("Logged out successfully");
@@ -18,19 +24,33 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="flex justify-between items-center h-16 sticky top-0 mb-1 p-4 shadow-bottom  bg-white z-10">
-        <div className="flex justify-center items-center cursor-pointer ">
-          <NavLink to="/" className="font-cursive font-bold text-3xl px-1">
+      <nav className="flex justify-between items-center  h-16 sticky top-0 mb-1 p-4 shadow-bottom  bg-white z-10 dark:bg-black dark:text-white dark:shadow-lg">
+        <div className=" cursor-pointer lg:ml-7">
+          <NavLink to="/" className="font-cursive font-bold text-3xl">
             Notes<span className="text-yellow-600">Keeper</span>
           </NavLink>
         </div>
-        <NavLink to="/login" className="btn py-2">
-          {!login ? (
-            <span>Login</span>
-          ) : (
-            <span onClick={() => logOutHandler()}>Logout</span>
-          )}
-        </NavLink>
+        <div className="flex items-center gap-12 sm:gap-5">
+          <span
+            className=""
+            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+          >
+            {theme === "light" ? (
+              <MdDarkMode size={25} />
+            ) : (
+              <MdLightMode size={25} />
+            )}
+          </span>
+          <NavLink to="/login" className="py-2">
+            {!login ? (
+              <span className="btn">Login</span>
+            ) : (
+              <span className="text-2xl" onClick={() => logOutHandler()}>
+                <MdLogout />
+              </span>
+            )}
+          </NavLink>
+        </div>
       </nav>
     </>
   );
