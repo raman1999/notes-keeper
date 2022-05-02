@@ -1,4 +1,4 @@
-export { Archieve } from "./Archieve/Archieve";
+export { Archive } from "./Archive/Archive";
 export { Notes } from "./Notes/Notes";
 export { Trash } from "./Trash/Trash";
 export { Home } from "./Home/Home";

@@ -8,7 +8,6 @@ import { useState } from "react";
 
 export const Sidebar = () => {
   const [showSideBar, setShowSideBar] = useState(false);
-  console.log(showSideBar);
   function getActiveStyle({ isActive }) {
     return isActive
       ? "sidebar-link text-yellow-700 dark:text-yellow-400 "

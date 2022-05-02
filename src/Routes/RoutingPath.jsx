@@ -1,13 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import {
-  Home,
-  Login,
-  Signup,
-  Notes,
-  Archieve,
-  Trash,
-  NotFound,
-} from "../Pages";
+import { Home, Login, Signup, Notes, Archive, Trash, NotFound } from "../Pages";
 import { NotesGrid } from "../Components";
 
 export function RoutingPath() {
@@ -18,7 +10,7 @@ export function RoutingPath() {
       <Route path="/signup" element={<Signup />} />
       <Route path="/notes" element={<NotesGrid />}>
         <Route index element={<Notes />} />
-        <Route path="archieve" element={<Archieve />} />
+        <Route path="archive" element={<Archive />} />
         <Route path="trash" element={<Trash />} />
       </Route>
       <Route path="*" element={<NotFound />} />

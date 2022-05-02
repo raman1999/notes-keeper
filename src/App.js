@@ -1,11 +1,11 @@
 import { RoutingPath } from "./Routes/RoutingPath";
-import { Navbar, Footer } from "./Components";
+import { Navbar } from "./Components";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
-    <div className="App h-[100vh]">
+    <div className="App h-[100vh] dark:text-white dark:bg-black">
       <Navbar />
       <ToastContainer
         position="top-right"
@@ -17,10 +17,9 @@ function App() {
         toastStyle={{ backgroundColor: "rgb(50,50,50)" }}
       />
 
-      <div className="routes-container min-h-[80vh]">
+      <div className="routes-container min-h-[80vh] dark:bg-black">
         <RoutingPath />
       </div>
-      <Footer />
     </div>
   );
 }

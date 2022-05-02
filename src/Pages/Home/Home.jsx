@@ -1,4 +1,3 @@
-import "./home.css";
 import { useNavigate } from "react-router-dom";
 import homeImg from "../../assets/images.png";
 import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
