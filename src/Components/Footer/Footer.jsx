@@ -2,8 +2,8 @@ import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
 export function Footer() {
   return (
     <>
-      <footer className="footer text-center flex-col space-y-2 border-t-4 border-gray-300 py-2">
-        <h3 className="text-xl text-gray-800 ">
+      <footer className="footer text-center flex-col space-y-2 border-t-2 border-gray-300 dark:border-t-0 py-2">
+        <h3 className="text-xl text-gray-800 dark:text-white">
           Made with <i className="fas fa-heart text-yellow-500"></i> by Raman
         </h3>
         <div>

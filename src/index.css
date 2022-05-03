@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,8 +10,23 @@
   .btn-secondary {
     @apply text-yellow-600 w-fit border-2 border-yellow-500 hover:bg-yellow-500  hover:text-white font-bold rounded-lg px-5 py-2.5 mr-2 mb-2;
   }
+  .card {
+    @apply flex flex-col min-h-[13rem] p-2 rounded-lg  justify-between gap-2  h-fit w-[20rem] text-black sm:w-[100%]  dark:shadow-sm dark:shadow-white dark:bg-gray-300;
+  }
+  .label-card {
+    @apply flex justify-center items-center p-4 rounded-lg w-[16rem] min-h-[10rem] text-2xl font-semibold text-gray-600  bg-yellow-100 break-all sm:w-full;
+  }
+  .modal {
+    @apply fixed left-0 top-0 z-40  w-full h-full overflow-auto text-black flex justify-center items-center bg-black bg-opacity-[0.25];
+  }
+  .heading {
+    @apply font-bold text-2xl text-gray-500 dark:text-white;
+  }
 }
 
 .shadow-bottom {
-  box-shadow: inset 0 -3px 0 0 #dadce0;
+  box-shadow: inset 0 -1.5px 0 0 #dadce0;
+}
+.card-shadow {
+  box-shadow: 0 1px 2px 0 rgb(60 64 67 / 30%), 0 1px 3px 1px rgb(60 64 67 / 15%);
 }

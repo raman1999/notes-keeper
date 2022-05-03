@@ -8,17 +8,16 @@ import { useState } from "react";
 
 export const Sidebar = () => {
   const [showSideBar, setShowSideBar] = useState(false);
-  console.log(showSideBar);
   function getActiveStyle({ isActive }) {
     return isActive
-      ? "sidebar-link text-yellow-700 dark:text-yellow-400 "
+      ? "sidebar-link text-yellow-700 dark:text-yellow-400"
       : "sidebar-link";
   }
 
   return (
     <>
       <ul
-        className={`sidebar gap-1 pt-5  bg-white dark:bg-black  ${
+        className={`sidebar gap-1 pt-5  bg-white dark:bg-black   ${
           showSideBar && "left-0"
         }`}
       >

@@ -1,6 +1,6 @@
 import { FaSearch, FaFilter } from "react-icons/fa";
-import { GiNotebook } from "react-icons/gi";
 import { BsPlusLg } from "react-icons/bs";
+import noteImg from "../../assets/note.png";
 import { useState } from "react";
 import { useFilterContext, useUserContext } from "../../Context";
 import { NoteForm, FilterModal } from "../../Components";
@@ -56,12 +56,13 @@ export function Notes() {
       {showNoteForm && <NoteForm setShowNoteForm={setShowNoteForm} />}
 
       {notes.length === 0 && pinnedNotes.length === 0 && (
-        <div className="flex flex-col items-center gap-5 mt-[5rem]">
-          <div className="bg-yellow-100 rounded-3xl p-6 w-fit">
-            <GiNotebook className="text-[15rem] text-yellow-600" />
+        <div className="flex flex-col items-center  mt-[6rem]">
+          <div className=" rounded-3xl  w-fit">
+            <img className="w-[17rem] h-[18rem]" src={noteImg} />
           </div>
-          <h3 className="text-3xl text-gray-600 font-semibold dark:text-white">
-            Add Some Notes
+
+          <h3 className="text-3xl text-[#80868b] dark:text-white  ">
+            Notes you add appear here
           </h3>
         </div>
       )}
@@ -85,6 +86,11 @@ export function Notes() {
             ))}
           </div>
         </div>
+      )}
+      {notes.length > 0 && [...pinnedNotes, ...filteredNotes].length === 0 && (
+        <h2 className="text-center mt-[8rem] text-3xl  text-[#80868b] font-semibold dark:text-white">
+          No Notes Found . Try Something Else
+        </h2>
       )}
     </div>
   );

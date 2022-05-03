@@ -19,7 +19,7 @@ export default function PasswordField({
           onChange={formHandler}
         />
         <i
-          className={`fas absolute right-2 top-2 text-xl text-gray-500 ${
+          className={`fas absolute right-2 top-2 text-xl text-gray-500 dark:text-white ${
             showPassword ? "fa-eye-slash" : "fa-eye"
           }`}
           onClick={() => setShowPassword(!showPassword)}

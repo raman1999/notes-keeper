@@ -62,11 +62,13 @@ export function Login() {
   return (
     <section className="text-center flex justify-center py-16">
       <form className="form-container" onSubmit={loginSubmitHandler}>
-        <h3 className="text-[2.5rem] font-bold text-gray-600">Login</h3>
+        <h3 className="text-[2.5rem] font-bold text-gray-600 dark:text-white">
+          Login
+        </h3>
 
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col space-y-4 text-gray-800 dark:text-white">
           <div className="flex space-x-3 items-center">
-            <span className=" text-2xl text-gray-800">
+            <span className=" text-2xl">
               <i className="fas fa-envelope"></i>
             </span>
             <input
@@ -79,7 +81,7 @@ export function Login() {
             />
           </div>
           <div className="flex space-x-3 items-center">
-            <span className=" text-2xl text-gray-800">
+            <span className=" text-2xl">
               <i className="fas fa-lock"></i>
             </span>
             <PasswordField
@@ -109,10 +111,10 @@ export function Login() {
             Login with Test Credentials
           </button>
           <div>
-            <span className="text-gray-800">Not a user yet ? </span>
+            <span className="">Not a user yet ? </span>
             <Link
               to="/signup"
-              className="text-yellow-800 border-b-2 border-yellow-700"
+              className="text-yellow-800 border-b-2 border-yellow-700 dark:text-yellow-500"
             >
               Create your account
             </Link>

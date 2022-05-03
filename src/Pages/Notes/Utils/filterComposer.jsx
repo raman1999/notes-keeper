@@ -31,7 +31,6 @@ export function SortByDate(state, notes) {
   const sortedNotes = [...notes].sort(
     (a, b) => new Date(a.date) - new Date(b.date)
   );
-  console.log(sortedNotes);
   return sortByDate === "oldest" ? sortedNotes : sortedNotes.reverse();
 }
 

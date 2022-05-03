@@ -10,6 +10,15 @@ export function AddLabelContainer({ labelList, setNoteForm }) {
   const isLabelInLabelList = (label) =>
     labelList.some((item) => item === label);
 
+  function labelInputHandler(e) {
+    if (e.keyCode === 13) {
+      e.preventDefault();
+      if (newLabel.length > 0) {
+        userDispatch({ type: "ADD_NEW_LABEL", payload: newLabel });
+        setNewLabel("");
+      }
+    }
+  }
   function addLabelHandler(label) {
     const newLabelList = !isLabelInLabelList(label)
       ? labelList.concat(label)
@@ -18,6 +27,18 @@ export function AddLabelContainer({ labelList, setNoteForm }) {
   }
   return (
     <div className="bg-white space-y-2 py-2 ">
+      <div className="pb-2">
+        <input
+          type="text"
+          placeholder="Add new label"
+          minLength="2"
+          maxLength="18"
+          value={newLabel}
+          className=" p-[3px] w-[9rem]  border-b-2 border-[#cbcaca] outline-none text-[1rem]"
+          onChange={(e) => setNewLabel(e.target.value)}
+          onKeyDown={labelInputHandler}
+        />
+      </div>
       {labels.map((label, index) => (
         <div key={index} className="space-x-2">
           <input
@@ -30,25 +51,6 @@ export function AddLabelContainer({ labelList, setNoteForm }) {
           <label htmlFor={index}>{label}</label>
         </div>
       ))}
-      <div className="flex items-center space-x-2">
-        <input
-          type="text"
-          placeholder="add label"
-          value={newLabel}
-          className="input-field p-[3px]  min-w-fit  border-2"
-          onChange={(e) => setNewLabel(e.target.value)}
-        />
-        <button
-          className="bg-yellow-500 text-white font-bold p-1 px-2"
-          onClick={() => {
-            userDispatch({ type: "ADD_NEW_LABEL", payload: newLabel });
-            setNewLabel("");
-          }}
-          disabled={newLabel.length === 0}
-        >
-          Add
-        </button>
-      </div>
     </div>
   );
 }
