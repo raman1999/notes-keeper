@@ -24,7 +24,7 @@ export function Navbar() {
 
   return (
     <>
-      <nav className="flex justify-between items-center  h-16 sticky top-0 mb-1 p-4 shadow-bottom  bg-white z-10 dark:bg-black dark:text-white dark:shadow-lg">
+      <nav className="flex justify-between items-center  h-16 sticky top-0 mb-1 p-4 text-gray-600  bg-white z-10 shadow-bottom  dark:bg-black  dark:text-white dark:shadow-sm dark:shadow-gray-300">
         <div className=" cursor-pointer lg:ml-7">
           <NavLink to="/" className="font-cursive font-bold text-3xl">
             Notes<span className="text-yellow-600">Keeper</span>

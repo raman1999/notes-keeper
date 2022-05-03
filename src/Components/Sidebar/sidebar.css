@@ -1,5 +1,5 @@
 .sidebar-link {
-  @apply flex space-x-6 items-center tracking-wide pl-7 py-3 text-3xl font-semibold font-["Roboto"]  text-gray-600 dark:text-white;
+  @apply flex space-x-6 items-center tracking-wide pl-7 py-3 text-3xl font-semibold font-["Roboto"] text-gray-600 dark:text-white;
 }
 
 @screen lg {

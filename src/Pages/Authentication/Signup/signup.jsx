@@ -100,7 +100,7 @@ export function Signup() {
   return (
     <section className="section-register flex justify-center py-16 px-2">
       <form className="form-container min-w-[35vw]" onSubmit={signupHandler}>
-        <h3 className="text-[2.5rem] font-bold text-gray-600 text-center mb-3">
+        <h3 className="text-[2.5rem] font-bold text-gray-600 text-center mb-3 dark:text-white">
           Register
         </h3>
         <div className="flex flex-col space-y-4">
@@ -175,11 +175,11 @@ export function Signup() {
           <button type="submit" className="btn w-full">
             REGISTER
           </button>
-          <p className="text-gray-800">
+          <p className="text-gray-800 dark:text-gray-300">
             Already have an account?
             <Link
               to="/login"
-              className="text-yellow-800 border-b-2 border-yellow-700 ml-2"
+              className="text-yellow-800 border-b-2 border-yellow-700 ml-2 dark:text-yellow-500"
             >
               Login here
             </Link>

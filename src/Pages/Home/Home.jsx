@@ -1,5 +1,5 @@
 import { useNavigate } from "react-router-dom";
-import homeImg from "../../assets/images.png";
+import homeImg from "../../assets/home_image.png";
 import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 import { useAuthenticationContext } from "../../Context";
 import { Footer } from "../../Components";
@@ -13,7 +13,11 @@ export function Home() {
     <>
       <section className="flex justify-around h-[80vh] items-center p-10 px-30 md:flex-col">
         <div className="flex justify-center h-full ">
-          <img className="w-full" src={homeImg} alt="logo" />
+          <img
+            className="w-full drop-shadow-[0px_5px_5px_white]"
+            src={homeImg}
+            alt="logo"
+          />
         </div>
         <div className=" flex justify-center items-center">
           <div className="flex flex-col space-y-4 ">
