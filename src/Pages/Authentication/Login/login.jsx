@@ -1,5 +1,5 @@
 import "../auth.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 import PasswordField from "../PasswordField";
 import { useAuthenticationContext } from "../../../Context";
@@ -16,6 +16,7 @@ export function Login() {
   const [errorData, setErrorData] = useState("");
   const { email, password } = loginForm;
   const [testUser, setTestUser] = useState(false);
+  const location = useLocation();
   useDocumentTitle("Login | NotesKeeper");
 
   useEffect(() => {
@@ -50,7 +51,7 @@ export function Login() {
           localStorage.setItem("token", encodedToken);
           setLogin(true);
           toast.success("Logged in succesfully");
-          navigate("/notes");
+          navigate(location.state?.path || "/notes");
         }
       } catch (err) {
         err.response.status === 500
@@ -61,7 +62,7 @@ export function Login() {
   }
   return (
     <section className="text-center flex justify-center py-16">
-      <form className="form-container" onSubmit={loginSubmitHandler}>
+      <form className="form-container sm:m-4" onSubmit={loginSubmitHandler}>
         <h3 className="text-[2.5rem] font-bold text-gray-600 dark:text-white">
           Login
         </h3>

@@ -1,4 +1,4 @@
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import "../auth.css";
 import axios from "axios";
 import { useState } from "react";
@@ -37,6 +37,7 @@ export function Signup() {
   } = errorData;
   const navigate = useNavigate();
   const { setLogin } = useAuthenticationContext();
+  const location = useLocation();
   useDocumentTitle("Signup | NotesKeeper");
 
   function formHandler(e) {
@@ -83,7 +84,7 @@ export function Signup() {
             setLogin(true);
             setSignupForm(initialFormData);
             toast.success("Logged in succesfully");
-            navigate("/notes");
+            navigate(location.state?.path || "/notes");
           }
         } catch (err) {
           err.response.status === 422
