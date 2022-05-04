@@ -5,3 +5,5 @@ export { Home } from "./Home/Home";
 export { Login } from "./Authentication/Login/login";
 export { Signup } from "./Authentication/Signup/signup";
 export { NotFound } from "./NotFound/NotFound";
+export { Labels } from "./Labels/Labels";
+export { SingleLabel } from "./SingleLabel/SingleLabel";
