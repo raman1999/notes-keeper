@@ -27,7 +27,7 @@ export const Editor = ({ value, setValue }) => {
     ],
   };
   return (
-    <div className="flex-grow">
+    <div className="flex-grow sm:mb-3">
       <ReactQuill
         theme="snow"
         modules={modules}

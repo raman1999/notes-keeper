@@ -21,7 +21,7 @@ export function Home() {
         </div>
         <div className=" flex justify-center items-center">
           <div className="flex flex-col space-y-4 ">
-            <h3 className="text-5xl font-bold">
+            <h3 className="text-5xl sm:text-4xl font-bold">
               Welcome to <span className="text-yellow-600">Notes Keeper</span>
             </h3>
             <p className="text-xl">

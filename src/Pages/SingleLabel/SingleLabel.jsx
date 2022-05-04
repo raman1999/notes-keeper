@@ -18,7 +18,7 @@ export function SingleLabel() {
       {notesInLabel.length === 0 ? (
         <div className="flex flex-col gap-5 justify-center items-center mt-[7rem] text-gray-600">
           <h2 className="text-3xl font-semibold text-center">
-            No Notes Found For {labelName}{" "}
+            No Notes Found For {labelName}
           </h2>
           <button
             className="btn flex items-center gap-2 "
