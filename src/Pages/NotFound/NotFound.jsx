@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 export function NotFound() {
-  useDocumentTitle("Page Not Found| FitTV");
+  useDocumentTitle("Page Not Found | NotesKeeper");
   return (
     <div className="page-not-found flex justify-center items-center   w-full h-[80vh] p-4 dark:text-gray-800">
       <div className="text-center w-[55%] md:w-[100%] h-[17rem] bg-[#edeecc] flex flex-col  items-center gap-4  p-5 pt-8">

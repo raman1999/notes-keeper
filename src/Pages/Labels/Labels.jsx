@@ -2,12 +2,15 @@ import { BsTagFill } from "react-icons/bs";
 import { useUserContext } from "../../Context";
 import { LabelCard } from "./LabelCard";
 import { useState } from "react";
+import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 export function Labels() {
   const {
     userState: { labels },
     userDispatch,
   } = useUserContext();
   const [newLabel, setNewLabel] = useState("");
+
+  useDocumentTitle("Labels | NotesKeeper");
 
   function addLabelHandler() {
     if (newLabel.length > 0) {

@@ -6,6 +6,7 @@ import { useFilterContext, useUserContext } from "../../Context";
 import { NoteForm, FilterModal } from "../../Components";
 import { NoteCard } from "./NoteCard";
 import { getFilterNotes } from "./Utils/getFilterNotes";
+import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 
 export function Notes() {
   const [showNoteForm, setShowNoteForm] = useState(false);
@@ -14,6 +15,7 @@ export function Notes() {
     userState: { notes, pinnedNotes },
   } = useUserContext();
   const { filterState, filterDispatch } = useFilterContext();
+  useDocumentTitle("Notes | NotesKeeper");
   const filteredNotes = getFilterNotes(filterState, notes);
 
   return (

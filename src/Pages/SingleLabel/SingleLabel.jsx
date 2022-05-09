@@ -1,6 +1,7 @@
 import { BsArrowRight } from "react-icons/bs";
 import { useParams, useNavigate } from "react-router-dom";
 import { useUserContext } from "../../Context";
+import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 import { NoteCard } from "../Notes/NoteCard";
 
 export function SingleLabel() {
@@ -13,6 +14,8 @@ export function SingleLabel() {
   const notesInLabel = totalNotes.filter((note) =>
     note.labelList.some((label) => label === labelName)
   );
+  useDocumentTitle(`${labelName} | NotesKeeper`);
+
   return (
     <div className="px-8">
       {notesInLabel.length === 0 ? (
