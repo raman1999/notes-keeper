@@ -1,5 +1,7 @@
 import { MdLogout, MdDarkMode, MdLightMode } from "react-icons/md";
+import { GoSignIn } from "react-icons/go";
 import { useNavigate, NavLink } from "react-router-dom";
+
 import {
   useAuthenticationContext,
   useUserContext,
@@ -25,12 +27,12 @@ export function Navbar() {
   return (
     <>
       <nav className="flex justify-between items-center  h-16 sticky top-0 mb-1 p-4 text-gray-600  bg-white z-10 shadow-bottom  dark:bg-black  dark:text-white dark:shadow-sm dark:shadow-gray-300">
-        <div className=" cursor-pointer lg:ml-7">
+        <div className="cursor-pointer lg:ml-7">
           <NavLink to="/" className="font-cursive font-bold text-3xl">
             Notes<span className="text-yellow-600">Keeper</span>
           </NavLink>
         </div>
-        <div className="flex items-center gap-12 sm:gap-5">
+        <div className="flex items-center gap-12 pl-7 sm:gap-5">
           <span
             className=""
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
@@ -43,7 +45,12 @@ export function Navbar() {
           </span>
           <NavLink to="/login" className="py-2">
             {!login ? (
-              <span className="btn">Login</span>
+              <>
+                <span className="btn sm:bg-white sm:text-yellow-600 sm:text-xl sm:hidden">
+                  Login
+                </span>
+                <GoSignIn className="hidden sm:block text-2xl text-yellow-600" />
+              </>
             ) : (
               <span className="text-2xl" onClick={() => logOutHandler()}>
                 <MdLogout />

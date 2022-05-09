@@ -8,8 +8,8 @@ function App() {
     <div className="App h-[100vh] dark:text-white dark:bg-black">
       <Navbar />
       <ToastContainer
-        position="top-right"
-        autoClose={1500}
+        position="top-center"
+        autoClose={1400}
         hideProgressBar={false}
         pauseOnHover="false"
         closeOnClick

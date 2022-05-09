@@ -1,11 +1,13 @@
 import { FaTrashAlt, FaTrash } from "react-icons/fa";
 import { useUserContext } from "../../Context";
+import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 import { TrashCard } from "./TrashCard";
 export function Trash() {
   const {
     userState: { trashedNotes },
     userDispatch,
   } = useUserContext();
+  useDocumentTitle("Trash | NotesKeeper");
 
   return (
     <div className="px-8">

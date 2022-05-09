@@ -79,7 +79,7 @@ export function NoteForm({ setShowNoteForm, existingNote }) {
               </option>
             </select>
           </div>
-          <div className=" ">
+          <div>
             <Tippy
               content={
                 <AddLabelContainer
@@ -105,7 +105,7 @@ export function NoteForm({ setShowNoteForm, existingNote }) {
             setNoteForm({ ...noteForm, description: e });
           }}
         />
-        <div className="flex justify-between">
+        <div className="flex justify-between sm:pt-5">
           <span className="text-red-700 font-semibold">{error}</span>
           <div>
             <button

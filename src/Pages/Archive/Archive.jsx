@@ -1,10 +1,13 @@
 import { MdArchive } from "react-icons/md";
 import { useUserContext } from "../../Context";
+import { useDocumentTitle } from "../../Hooks/useDocumentTitle";
 import { ArchiveCard } from "./ArchiveCard";
 export function Archive() {
   const {
     userState: { archivedNotes },
   } = useUserContext();
+
+  useDocumentTitle("Archives | NotesKeeper");
 
   return (
     <div className="px-8">
